@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+/* ---------- GLOBAL ---------- */
+body {
+  margin: 0;
+  background: #111;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: padding 0.3s ease;
+}
+
+
+.menu-left {
+  justify-self: start;
+}
+
+.menu-right {
+  justify-self: end;
+}
+
+.menu-left a,
+.menu-right a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.menu-left a:hover,
+.menu-right a:hover {
+  color: #999;
+}
+
+.logo {
+  justify-self: center;
+}
+
+.logo img {
+  max-height: 60px;
+  width: auto;
+  display: block;
+  transition: max-height 0.3s ease;
+}
+
+/* ---------- HEADER SHRINK ---------- */
+header.shrink {
+  padding: 10px 20px;
+}
+
+header.shrink .logo img {
+  max-height: 40px;
+}
+
+/* ---------- GRID ZDJĘĆ ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 5px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+/* ---------- GALERIA NA PODSTRONACH ---------- */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- RESPONSYWNOŚĆ ---------- */
+@media (max-width: 600px) {
+  header {
+    grid-template-columns: 1fr auto 1fr;
+    padding: 15px;
+  }
+
+  .menu-left a,
+  .menu-right a {
+    margin: 0 5px;
+    font-size: 12px;
+  }
+
+  .logo img {
+    max-height: 45px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
