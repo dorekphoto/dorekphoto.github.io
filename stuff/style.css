@@ -64,6 +64,55 @@ header {
   transition: max-height 0.3s ease;
 }
 
+/* ---------- ABOUT PAGE ---------- */
+.about {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+.about h1, .about h2 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #fff;
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+}
+
+.about p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact a:hover {
+  color: #999;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #000;
+  margin-top: 40px;
+}
+
 /* ---------- HEADER SHRINK ---------- */
 header.shrink {
   padding: 10px 20px;
@@ -112,6 +161,20 @@ header.shrink .logo img {
 
 .grid-item:hover .overlay {
   opacity: 1;
+}
+
+.social-icon {
+  width: 40px;  
+  height: 32px;  
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  object-fit: contain;
+}
+
+.social-icon:hover {
+  transform: scale(1.15); 
+  opacity: 0.8;
 }
 
 /* ---------- GALERIA NA PODSTRONACH ---------- */
@@ -191,6 +254,7 @@ header.shrink .logo img {
     font-size: 13px;
     padding: 10px;
   }
+  
   .logo {
     order: -1;
   }
