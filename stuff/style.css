@@ -198,15 +198,28 @@ header.shrink .logo img {
 }
 
 /* ---------- RESPONSYWNOŚĆ ---------- */
-@media (max-width: 1024px) { /* tablety w poziomie */
+@media (max-width: 1024px) { /* --- TABLETY --- */
   header {
-    padding: 15px 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
+
   .logo img {
-    max-height: 50px;
+    max-width: 180px;
+    height: auto;
   }
-  .menu-left a, .menu-right a {
-    font-size: 13px;
+
+  .menu-left a, 
+  .menu-right a {
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
+
+  nav {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-top: 5px;
   }
 }
 
